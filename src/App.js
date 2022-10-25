@@ -20,7 +20,7 @@ function App() {
 
   const handleClick = async () => {
     setLoading(true);
-    await fetch(`https://qcuialeirsxv5ht6crufymcjse0xmkop.lambda-url.us-east-1.on.aws?string=${inputString}`, {
+    await fetch(`https://qcuialeirsxv5ht6crufymcjse0xmkop.lambda-url.us-east-1.on.aws?string=${encodeURIComponent(inputString)}`, {
       method: 'POST',
     })
       .then(response => response.json())
