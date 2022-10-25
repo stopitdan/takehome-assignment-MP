@@ -4,11 +4,10 @@ import { TextField, Button } from '@mui/material';
 const InputForm = ({ inputString, handleInputChange, handleClick}) => {
   // handle enter keypress only when input is selected
   const handleUserKeyPress = useCallback(event => {
-    const { key, keyCode } = event;
-    if(keyCode === 13 && document.activeElement === document.getElementById('input-string-textfield')){
+    if(event.keyCode === 13 && document.activeElement === document.getElementById('input-string-textfield')){
       handleClick()
     }
-  }, [inputString]);
+  }, [handleClick]);
 
   useEffect(() => {
     window.addEventListener("keydown", handleUserKeyPress);

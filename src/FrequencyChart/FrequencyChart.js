@@ -40,7 +40,7 @@ const FrequencyChart = ({ data, chartType, setChartType }) => {
         data: Object.values(data)
       }]
     })
-  }, [data, chartType]);
+  }, [data, chartType]); // eslint-disable-line react-hooks/exhaustive-deps
 
 
   const handleChartTypeIconClick = (type) => () => {
