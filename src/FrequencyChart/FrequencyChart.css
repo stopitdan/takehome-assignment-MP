@@ -1,0 +1,53 @@
+.chart-wrapper {
+	position: relative;
+	width: 70%;
+	display: inline-block;
+	padding-top: 4px; /* to match up with the uniqueness title which has a top padding as well */
+}
+
+@media only screen and (max-width: 1000px) {
+	.chart-wrapper {
+		width: 100%;
+	}
+}
+
+.chart-selector {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: 1;
+	background-color: white;
+	padding: 4px 8px;
+	color: black;
+}
+
+/* override default Material UI Icon styles with !important */
+.chart-icon {
+	height: 32px !important;
+	width: 32px !important;
+	margin-left: 2px !important;
+}
+
+.chart-icon.rotate {
+	transform: rotate(90deg);
+}
+
+.chart-icon.disabled {
+	user-select: none;
+	cursor: pointer;
+	opacity: 0.25;
+	border-radius: 2px;
+	pointer-events: all;
+}
+
+.chart-icon:not(.disabled) {
+	pointer-events: none;
+}
+
+.chart-icon.disabled:hover {
+	background-color: rgba(0,0,0,0.2);
+	opacity: 0.35;
+}

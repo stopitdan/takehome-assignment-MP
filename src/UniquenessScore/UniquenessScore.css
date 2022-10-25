@@ -1,0 +1,81 @@
+.uniqueness-wrapper {
+	vertical-align: top;
+	display: inline-flex;
+	flex-direction: column;
+	align-items: center;
+	float: right;
+	padding: 12px;
+	background-color: aliceblue;
+	border-radius: 6px;
+	position: relative;
+	z-index: 2;
+}
+
+@media only screen and (max-width: 1000px) {
+	.uniqueness-wrapper {
+		float: unset;
+		margin-bottom: 20px;
+	}
+}
+
+/* match this title to the chart title to make it cohesive */
+.uniqueness-title {
+	font-family: 'Lucida Grande';
+	font-size: 18px;
+	color: #333333;
+	display: flex;
+	align-items: center;
+	position: relative;
+	user-select: none;
+	padding: 4px
+}
+
+.uniqueness-title svg {
+	color: #333333;
+	height: 14px;
+	width: 14px;
+	margin-left: 2px;
+	padding: 2px;
+}
+
+.uniqueness-info-box {
+	display: none;
+	width: 120px;
+	font-size: 10px;
+	font-weight: bold;
+	position: absolute;
+	z-index: 2;
+	top: -36px;
+	right: 0;
+	background-color: whitesmoke;
+	color: #333333;
+	padding: 8px;
+	border-radius: 6px;
+}
+
+.uniqueness-info-box.showing {
+	display: block;
+}
+
+.color-gradient-box {
+	height: 14px;
+	width: calc(100% - 16px);
+	border-radius: 4px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0 6px;
+	background: linear-gradient(90deg, red, orange, gold, yellowgreen, green);
+	color: white;
+	font-weight: bold;
+	font-family: 'Bebas Neue';
+	margin-top: 6px;
+}
+
+.uniqueness-score {
+	font-size: 90px;
+	font-weight: bold;
+	font-family: 'Bebas Neue';
+	margin-top: 10px;
+	/* text-shadow: 1px 1px 1px #333333; */
+}
